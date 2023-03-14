@@ -55,15 +55,60 @@
       <div class="jumbotron" align="text-left">
         <h1 class="display-4" id="hero-heading">WebP Smasher</h1>
         <p class="lead">
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
+          WebP is annoying but necessary - sort of like AAA batteries. Converter
+          sites usually either ask you to sign up and collect marketing data, or
+          simply don't work all that well.
+          <em>Enter WebP Smasher by Ghostybox Apps.</em>
         </p>
         <hr class="my-4" />
         <p>
-          It uses utility classes for typography and spacing to space content
-          out within the larger container.
+          Simply upload your file below, click the smash button and enjoy a
+          fresh, shiny PNG version of your pesky WebP file.
         </p>
-        <a class="btn btn-info" href="#" role="button">Learn more</a>
+        <a
+          class="btn btn-info"
+          href="#"
+          role="button"
+          data-bs-toggle="modal"
+          data-bs-target="#webpModal"
+          >Learn more</a
+        >
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="webpModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  About WebP Files
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">Some text</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-info"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <br />
         <br />
       </div>
