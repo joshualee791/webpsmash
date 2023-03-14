@@ -106,7 +106,7 @@
 
         var reader = new FileReader();
         reader.readAsArrayBuffer(webpFile);
-        reader.onload = function () {
+        reader.onLoad = function () {
           var webpArrayBuffer = reader.result;
 
           var pngArrayBuffer = UPNG.decode(webpArrayBuffer);
