@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WebP to PNG Converter</title>
+    <title>File Converter</title>
     <script src="convert.js"></script>
   </head>
   <body>
-    <h1>WebP to PNG Converter</h1>
-    <form method="POST" action="#" enctype="multipart/form-data">
-      <input type="file" name="fileToConvert" accept=".webp" />
+    <h1>File Converter</h1>
+    <form>
+      <input type="file" id="fileToConvert" accept=".webp" />
       <br /><br />
-      <input type="button" value="Convert to PNG" onclick="convertWebP()" />
+      <button type="button" onclick="convertFile()">Convert</button>
     </form>
   </body>
 </html>
