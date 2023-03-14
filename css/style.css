@@ -1,0 +1,13 @@
+*,
+body {
+  font-family: "Satoshi", sans-serif;
+}
+* #hero-heading,
+body #hero-heading {
+  margin-top: 50px;
+  font-weight: 900;
+}
+* #smasher,
+body #smasher {
+  margin-top: 50px;
+}/*# sourceMappingURL=style.css.map */
