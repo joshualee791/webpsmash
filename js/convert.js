@@ -1,4 +1,5 @@
 function convertFile() {
+  console.log("it is running...");
   const input = document.getElementById("fileToConvert");
   const file = input.files[0];
   if (file) {
