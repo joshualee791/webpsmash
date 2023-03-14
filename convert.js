@@ -25,7 +25,9 @@ function convertFile() {
             downloadLink.download = fileName;
             document.body.appendChild(downloadLink);
             downloadLink.click();
-            document.body.removeChild(downloadLink);
+            setTimeout(() => {
+              document.body.removeChild(downloadLink);
+            }, 0);
           }
         }, "image/png");
       };
