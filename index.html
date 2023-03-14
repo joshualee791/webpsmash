@@ -29,7 +29,7 @@
       href="https://api.fontshare.com/v2/css?f[]=satoshi@1,2&display=swap"
       rel="stylesheet"
     />
-    
+
     <title>Webp Smasher</title>
   </head>
   <body>
@@ -60,15 +60,22 @@
           It uses utility classes for typography and spacing to space content
           out within the larger container.
         </p>
-        <a class="btn btn-primary" href="#" role="button">Learn more</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
         <br />
         <br />
       </div>
-      <form id="smasher" method="POST" action="#" enctype="multipart/form-data">
-        <div class="form-group">
+      <div class="form-group">
+        <form
+          id="smasher"
+          method="POST"
+          action="#"
+          enctype="multipart/form-data"
+        >
           <div class="row">
             <div class="col-8">
-              <label for="webpFile" class="form-label">Choose a .webp file to convert:</label>
+              <label for="webpFile" class="form-label"
+                >Choose a .webp file to convert:</label
+              >
               <input
                 type="file"
                 name="fileToConvert"
@@ -78,7 +85,7 @@
               />
               <br />
             </div>
-              <div class="col-3">
+            <div class="col-6">
               <button
                 class="btn btn-primary btn-lg"
                 type="button"
@@ -88,8 +95,10 @@
                 Convert to PNG
               </button>
             </div>
-      </form>
+          </div>
+        </form>
       </div>
+    </div>
     <script src="convert.js"></script>
   </body>
 </html>
