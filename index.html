@@ -67,27 +67,23 @@
       <form id="smasher">
         <div class="form-group">
           <div class="row">
-            <div class="col-8">
-              <label for="webpFile" class="form-label"
-                >Choose a .webp file to convert:</label
-              >
-              <input
-                class="form-control form-control-lg"
-                id="webpFile"
-                type="file"
-                accept=".webp"
-              />
-            </div>
-            <div class="col-4">
-              <br />
-              <button
-                class="btn btn-primary btn-lg"
-                type="button"
-                onClick="convertFile()"
-              >
-                Convert to PNG
-              </button>
-            </div>
+            <label for="webpFile" class="form-label"
+              >Choose a .webp file to convert:</label
+            >
+            <input
+              class="form-control form-control-lg"
+              id="webpFile"
+              type="file"
+              accept=".webp"
+            />
+            <br />
+            <button
+              class="btn btn-primary btn-lg"
+              type="button"
+              onClick="convertFile()"
+            >
+              Convert to PNG
+            </button>
           </div>
         </div>
       </form>
