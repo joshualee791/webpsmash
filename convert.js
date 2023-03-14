@@ -1,5 +1,4 @@
 function convertFile() {
-  console.log("it is running...");
   const input = document.getElementById("fileToConvert");
   const file = input.files[0];
   if (file) {
@@ -16,12 +15,18 @@ function convertFile() {
         const ctx = canvas.getContext("2d");
         ctx.drawImage(img, 0, 0, img.width, img.height);
         canvas.toBlob((blob) => {
-          const downloadLink = document.createElement("a");
-          downloadLink.href = URL.createObjectURL(blob);
-          downloadLink.download = file.name.replace(/\.[^/.]+$/, "") + ".png";
-          document.body.appendChild(downloadLink);
-          downloadLink.click();
-          document.body.removeChild(downloadLink);
+          const fileName = prompt(
+            "Enter a file name:",
+            file.name.replace(/\.[^/.]+$/, "") + ".png"
+          );
+          if (fileName) {
+            const downloadLink = document.createElement("a");
+            downloadLink.href = URL.createObjectURL(blob);
+            downloadLink.download = fileName;
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+          }
         }, "image/png");
       };
     };
