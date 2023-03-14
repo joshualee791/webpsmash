@@ -64,56 +64,31 @@
         <br />
         <br />
       </div>
-      <form id="smasher">
+      <form id="smasher" method="POST" action="#" enctype="multipart/form-data">
         <div class="form-group">
           <div class="row">
             <label for="webpFile" class="form-label"
               >Choose a .webp file to convert:</label
             >
             <input
+              type="file"
+              name="fileToConvert"
               class="form-control form-control-lg"
               id="webpFile"
-              type="file"
               accept=".webp"
             />
             <br />
             <button
               class="btn btn-primary btn-lg"
-              type="submit"
-              onClick="convertFile()"
+              type="button"
+              value="Convert to PNG"
+              onclick="convertWebP()"
             >
               Convert to PNG
             </button>
           </div>
         </div>
       </form>
-      <br />
-      <img id="pngImage" />
     </div>
-    <script src="https://unpkg.com/upng-js/dist/UPNG.js"></script>
-    <script>
-      function convertFile() {
-        var webpFile = document.getElementById("webpFile").files[0];
-
-        if (!webpFile) {
-          alert("Please choose a .webp file to convert.");
-          return;
-        }
-
-        var reader = new FileReader();
-        reader.readAsArrayBuffer(webpFile);
-        reader.onLoad = function () {
-          var webpArrayBuffer = reader.result;
-
-          var pngArrayBuffer = UPNG.decode(webpArrayBuffer);
-
-          var pngBlob = new Blob([pngArrayBuffer], { type: "image/png" });
-          var pngUrl = URL.createObjectURL(pngBlob);
-
-          var pngImage = document.getElementById("pngImage");
-          pngImage.src = pngUrl;
-        };
-      }
-    </script>
   </body>
 </html>
