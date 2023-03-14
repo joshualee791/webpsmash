@@ -19,10 +19,10 @@ function convertFile() {
           const link = document.createElement("a");
           link.href = URL.createObjectURL(blob);
           link.download = fileName;
-          link.target = "_blank";
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
+          URL.revokeObjectURL(link.href);
           alert("File converted successfully.");
         }, "image/png");
       };
