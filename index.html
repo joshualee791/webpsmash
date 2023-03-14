@@ -34,26 +34,26 @@
   </head>
   <body>
     <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
-      <div class="container-fluid">
+      <div class="container">
         <a
           class="navbar-brand"
           href="https://joshualee791.github.io/webpsmash/"
         >
           <img
-            src="img/bootstrap-logo.svg"
+            src="img/logogba.svg"
             alt="Logo"
             width="30"
             height="24"
             class="d-inline-block align-text-top"
           />
-          ghostylabs
+          ghostybox apps
         </a>
       </div>
     </nav>
 
     <div class="container px-4 text-left">
       <div class="jumbotron" align="text-left">
-        <h1 class="display-4" id="hero-heading">Webp Smasher</h1>
+        <h1 class="display-4" id="hero-heading">WebP Smasher</h1>
         <p class="lead">
           This is a simple hero unit, a simple jumbotron-style component for
           calling extra attention to featured content or information.
@@ -63,7 +63,7 @@
           It uses utility classes for typography and spacing to space content
           out within the larger container.
         </p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <a class="btn btn-info" href="#" role="button">Learn more</a>
         <br />
         <br />
       </div>
@@ -75,27 +75,30 @@
           enctype="multipart/form-data"
         >
           <div class="row">
-            <div class="col-8">
+            <div class="col-fluid">
               <label for="webpFile" class="form-label"
                 >Choose a .webp file to convert:</label
               >
               <input
                 type="file"
                 name="fileToConvert"
-                class="form-control form-control-lg"
+                class="form-control form-control-md"
                 id="fileToConvert"
                 accept=".webp"
               />
               <br />
             </div>
-            <div class="col-6">
+          </div>
+          <div class="row">
+            <div class="col-fluid">
               <button
-                class="btn btn-primary btn-lg"
+                class="btn btn-info btn-md"
+                id="smasherBtn"
                 type="button"
                 value="Convert to PNG"
                 onclick="convertFile()"
               >
-                Convert to PNG
+                Smash to PNG!
               </button>
             </div>
           </div>
