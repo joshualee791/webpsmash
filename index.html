@@ -1,94 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Misc CSS -->
-    <link href="css/style.css" rel="stylesheet" />
-
-    <!-- Call Satoshi -->
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=satoshi@1,2&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Webp Smasher</title>
+    <title>WebP to PNG Converter</title>
+    <script src="convert.js"></script>
   </head>
   <body>
-    <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-          <img
-            src="img/bootstrap-logo.svg"
-            alt="Logo"
-            width="30"
-            height="24"
-            class="d-inline-block align-text-top"
-          />
-          Bootstrap
-        </a>
-      </div>
-    </nav>
-
-    <div class="container px-4 text-center">
-      <div class="jumbotron" align="center">
-        <h1 class="display-4" id="hero-heading">Webp Smasher</h1>
-        <p class="lead">
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
-        </p>
-        <hr class="my-4" />
-        <p>
-          It uses utility classes for typography and spacing to space content
-          out within the larger container.
-        </p>
-        <a class="btn btn-primary" href="#" role="button">Learn more</a>
-        <br />
-        <br />
-      </div>
-      <form id="smasher" method="POST" action="#" enctype="multipart/form-data">
-        <div class="form-group">
-          <div class="row">
-            <label for="webpFile" class="form-label"
-              >Choose a .webp file to convert:</label
-            >
-            <input
-              type="file"
-              name="fileToConvert"
-              class="form-control form-control-lg"
-              id="webpFile"
-              accept=".webp"
-            />
-            <br />
-            <button
-              class="btn btn-primary btn-lg"
-              type="button"
-              value="Convert to PNG"
-              onclick="convertWebP()"
-            >
-              Convert to PNG
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
+    <h1>WebP to PNG Converter</h1>
+    <form method="POST" action="#" enctype="multipart/form-data">
+      <input type="file" name="fileToConvert" accept=".webp" />
+      <br /><br />
+      <input type="button" value="Convert to PNG" onclick="convertWebP()" />
+    </form>
   </body>
 </html>
