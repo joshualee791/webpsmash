@@ -20,14 +20,34 @@ function convertFile() {
             file.name.replace(/\.[^/.]+$/, "") + ".png"
           );
           if (fileName) {
-            const downloadLink = document.createElement("a");
-            downloadLink.href = URL.createObjectURL(blob);
-            downloadLink.download = fileName;
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
-            setTimeout(() => {
-              document.body.removeChild(downloadLink);
-            }, 0);
+            const fileContent = new Blob([blob]);
+            window.webkitRequestFileSystem(
+              window.PERSISTENT,
+              1024 * 1024,
+              (fs) => {
+                fs.root.getFile(
+                  fileName,
+                  { create: true },
+                  (fileEntry) => {
+                    fileEntry.createWriter(
+                      (fileWriter) => {
+                        fileWriter.write(fileContent);
+                        alert("File saved successfully.");
+                      },
+                      (err) => {
+                        alert(`Failed to write file: ${err}`);
+                      }
+                    );
+                  },
+                  (err) => {
+                    alert(`Failed to get file entry: ${err}`);
+                  }
+                );
+              },
+              (err) => {
+                alert(`Failed to request filesystem: ${err}`);
+              }
+            );
           }
         }, "image/png");
       };
